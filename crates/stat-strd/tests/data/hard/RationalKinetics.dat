@@ -1,0 +1,43 @@
+Synthetic StRD-layout file (invented data; NOT a NIST dataset)
+Dataset Name:  RationalKinetics (RationalKinetics.dat)
+
+Procedure:     Nonlinear Least Squares Regression
+
+Data:          1 Response Variable  (y)
+               1 Predictor Variable (x)
+               11 Observations
+               Higher Level of Difficulty
+               Generated Data
+
+Model:         Synthetic Class
+               4 Parameters (b1 to b4)
+
+               y = b1*(x**2+x*b2) / (x**2+x*b3+b4)  +  e
+
+
+          Starting values                  Certified Values
+
+        Start 1     Start 2           Parameter     Standard Deviation
+  b1 =   25          0.25            1.9255426108E-01  2.7048622753E-03
+  b2 =   39          0.39            9.6083601516E-02  3.2876698096E-02
+  b3 =   41.5        0.415           9.2579040291E-02  1.6550654611E-02
+  b4 =   39          0.39            8.8256336846E-02  1.5815344722E-02
+
+Residual Sum of Squares:                    2.3632455382E-05
+Residual Standard Deviation:                1.8374071553E-03
+Degrees of Freedom:                                7
+Number of Observations:                            11
+
+
+Data:   y               x
+      0.191970      4.0000
+      0.188060      2.0000
+      0.179721      1.0000
+      0.148585      0.5000
+      0.095730      0.2500
+      0.065954      0.1670
+      0.043929      0.1250
+      0.034661      0.1000
+      0.030732      0.0833
+      0.020698      0.0714
+      0.020278      0.0625

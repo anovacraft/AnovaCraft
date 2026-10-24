@@ -1,0 +1,82 @@
+[package]
+name = "app-model"
+description = "GUI-independent application logic: analysis reports, plot data and linked brushing. The egui front end (app-gui) is a thin layer over this crate."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+publish.workspace = true
+
+[features]
+# Database drivers and web access for importing external data (roadmap 1.4).
+# ODBC is off by default: it links the system's ODBC driver manager
+# (unixODBC or iODBC), which not every machine has.
+default = ["sqlite", "postgres", "mysql", "web"]
+sqlite = ["dep:rusqlite"]
+postgres = ["dep:postgres", "dep:tokio-postgres-rustls", "dep:rustls", "dep:webpki-roots"]
+mysql = ["dep:mysql"]
+web = ["dep:ureq", "dep:scraper"]
+odbc = ["dep:odbc-api"]
+
+[dependencies]
+calamine = "0.26"
+# Images opened as tables of pixels (File ▸ Open) and saved back (Export ▸ Image).
+image = { version = "0.25", default-features = false, features = ["png", "jpeg", "tiff", "bmp"] }
+mysql = { version = "28", default-features = false, features = ["default-rust", "rustls-tls-ring"], optional = true }
+odbc-api = { version = "29", optional = true }
+postgres = { version = "0.19", optional = true }
+rusqlite = { version = "0.37", features = ["bundled"], optional = true }
+rustls = { version = "0.23", default-features = false, features = ["ring", "std", "tls12"], optional = true }
+tokio-postgres-rustls = { version = "0.13", optional = true }
+ureq = { version = "3", optional = true }
+scraper = { version = "0.27", optional = true }
+webpki-roots = { version = "1", optional = true }
+# Report export: PDF pages (krilla, with plots drawn from their SVG by
+# krilla-svg/usvg), text shaping for measuring and setting lines, and the zip
+# container of Word documents.
+krilla = { version = "0.8", default-features = false }
+krilla-svg = "0.8"
+regex = "1"
+rustybuzz = "0.20"
+usvg = "0.47"
+zip = { version = "2.4.2", default-features = false, features = ["deflate"] }
+rayon.workspace = true
+rhai = "1.26"
+rust_xlsxwriter = "0.79"
+stat-core.workspace = true
+stat-data.workspace = true
+stat-discrete.workspace = true
+stat-doe.workspace = true
+stat-inference.workspace = true
+stat-linear.workspace = true
+stat-mixed.workspace = true
+stat-multivariate.workspace = true
+stat-predictive.workspace = true
+stat-quality.workspace = true
+stat-reliability.workspace = true
+stat-timeseries.workspace = true
+stat-functional.workspace = true
+stat-text.workspace = true
+stat-bayes.workspace = true
+stat-signal.workspace = true
+stat-strd.workspace = true
+stat-viz.workspace = true
+
+# The operating system's TLS (Security framework, SChannel) as a second try
+# for sites that refuse rustls's handshake; see `external::http_get`.
+# WebAssembly in a browser (scripts/check-web-build.sh): Rhai's hash seeds
+# come from the browser's random source. Native builds are unaffected.
+[target.'cfg(all(target_arch = "wasm32", target_os = "unknown"))'.dependencies]
+rhai = { version = "1.26", features = ["wasm-bindgen"] }
+
+[target.'cfg(any(target_os = "macos", target_os = "windows"))'.dependencies]
+ureq = { version = "3", optional = true, features = ["native-tls-no-default"] }
+
+[dev-dependencies]
+# Resets a test connection (SO_LINGER 0) to check the reset message.
+socket2 = "0.6"
+# Checks that exported Word parts are well-formed XML.
+roxmltree = "0.21"
+
+[lints]
+workspace = true

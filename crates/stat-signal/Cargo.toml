@@ -1,0 +1,18 @@
+[package]
+name = "stat-signal"
+description = "Signals and spectra: smoothing filters, derivatives, integrals and interpolation of x–y data, baseline correction, peak finding and multi-peak fitting; fast Fourier transforms of any length, windows, spectra, Welch's periodogram and spectrograms, IIR and FIR filters, convolution, deconvolution, correlation, the Hilbert transform, discrete and continuous wavelet transforms with denoising, and 2-D Fourier analysis, filtering, registration and deconvolution of images."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+publish.workspace = true
+
+[dependencies]
+stat-core.workspace = true
+rayon.workspace = true
+
+[dev-dependencies]
+stat-data.workspace = true
+
+[lints]
+workspace = true

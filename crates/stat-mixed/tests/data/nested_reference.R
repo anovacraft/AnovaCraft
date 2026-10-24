@@ -1,0 +1,35 @@
+# Reference values for crates/stat-mixed/src/nested.rs (nested comparison:
+# groups, subjects nested in groups, replicate measurements).
+# Run with `Rscript nested_reference.R` (R 4.x, lme4, lmerTest).
+suppressMessages({ library(lme4); library(lmerTest) })
+options(digits = 15)
+set.seed(17)
+group <- factor(rep(c("Control", "Low", "High"), each = 12), levels = c("Control", "Low", "High"))
+subject <- factor(rep(1:4, each = 3, times = 3))
+effect <- c(Control = 0, Low = 1.5, High = 3)[as.character(group)]
+subj_effect <- rep(rnorm(12, sd = 1.2), each = 3)
+y <- round(10 + effect + subj_effect + rnorm(36, sd = 0.8), 1)
+d <- data.frame(group, subject, y)
+cat("y <-", deparse(y), "\n")
+
+cat("== Balanced: classical nested ANOVA ==\n")
+print(summary(aov(y ~ group + Error(group:subject), data = d)))
+cat("== Balanced: REML with Satterthwaite ==\n")
+m <- lmer(y ~ group + (1 | group:subject), data = d)
+print(anova(m))
+print(summary(m)$coefficients)
+print(as.data.frame(VarCorr(m)))
+cat("== Two groups (nested t test) ==\n")
+d2 <- droplevels(subset(d, group != "High"))
+m2 <- lmer(y ~ group + (1 | group:subject), data = d2)
+print(summary(m2)$coefficients)
+print(as.data.frame(emmeans::emmeans(m2, ~group, lmer.df = "satterthwaite")))
+cat("== Unbalanced: rows 2, 9, 10, 20, 33 dropped ==\n")
+du <- d[-c(2, 9, 10, 20, 33), ]
+mu <- lmer(y ~ group + (1 | group:subject), data = du)
+print(anova(mu))
+print(contestMD(mu, L = rbind(c(0, 1, 0), c(0, 0, 1))))
+print(summary(mu)$coefficients)
+print(as.data.frame(VarCorr(mu)))
+print(as.data.frame(emmeans::emmeans(mu, ~group, lmer.df = "satterthwaite")))
+print(as.data.frame(pairs(emmeans::emmeans(mu, ~group, lmer.df = "satterthwaite"), adjust = "none")))

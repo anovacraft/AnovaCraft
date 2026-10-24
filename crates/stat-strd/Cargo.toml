@@ -1,0 +1,18 @@
+[package]
+name = "stat-strd"
+description = "NIST Statistical Reference Datasets (StRD) and certified values used to verify the numerical accuracy of the engine."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+publish.workspace = true
+
+[dependencies]
+stat-core.workspace = true
+
+[dev-dependencies]
+stat-linear.workspace = true
+stat-data.workspace = true
+
+[lints]
+workspace = true

@@ -1,0 +1,17 @@
+[package]
+name = "stat-mixed"
+description = "Linear and generalized linear mixed models: random intercepts and slopes, REML/ML, Laplace and adaptive Gauss-Hermite quadrature."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+publish.workspace = true
+
+[dependencies]
+stat-core.workspace = true
+
+[lints]
+workspace = true
+
+[dev-dependencies]
+stat-data.workspace = true

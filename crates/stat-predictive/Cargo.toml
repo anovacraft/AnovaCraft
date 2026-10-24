@@ -1,0 +1,15 @@
+[package]
+name = "stat-predictive"
+description = "Predictive modelling: Gaussian processes and sequential design by expected improvement, elastic net (lasso and ridge), classification and regression trees, random forests, boosted trees, multivariate adaptive regression splines, partial least squares, support vector machines, neural networks, validation roles and fit measures."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+publish.workspace = true
+
+[dependencies]
+stat-core.workspace = true
+rayon.workspace = true
+
+[lints]
+workspace = true

@@ -1,0 +1,17 @@
+[package]
+name = "stat-discrete"
+description = "Categorical data analysis: contingency tables and tests of independence."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+publish.workspace = true
+
+[dependencies]
+stat-core.workspace = true
+
+[lints]
+workspace = true
+
+[dev-dependencies]
+stat-data.workspace = true

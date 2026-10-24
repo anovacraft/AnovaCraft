@@ -1,0 +1,111 @@
+[workspace]
+resolver = "3"
+members = [
+    "crates/stat-core",
+    "crates/stat-data",
+    "crates/stat-linear",
+    "crates/stat-strd",
+    "crates/stat-quality",
+    "crates/stat-discrete",
+    "crates/stat-doe",
+    "crates/stat-multivariate",
+    "crates/stat-predictive",
+    "crates/stat-reliability",
+    "crates/stat-inference",
+    "crates/stat-mixed",
+    "crates/stat-viz",
+    "crates/stat-timeseries",
+    "crates/stat-functional",
+    "crates/stat-text",
+    "crates/stat-bayes",
+    "crates/stat-signal",
+    "crates/stat-script",
+    "crates/app-model",
+    "crates/app-gui",
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.85"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/anovacraft/AnovaCraft"
+publish = false
+
+[workspace.dependencies]
+stat-core = { path = "crates/stat-core" }
+stat-linear = { path = "crates/stat-linear" }
+stat-data = { path = "crates/stat-data" }
+stat-strd = { path = "crates/stat-strd" }
+stat-quality = { path = "crates/stat-quality" }
+stat-discrete = { path = "crates/stat-discrete" }
+stat-doe = { path = "crates/stat-doe" }
+stat-multivariate = { path = "crates/stat-multivariate" }
+stat-predictive = { path = "crates/stat-predictive" }
+stat-reliability = { path = "crates/stat-reliability" }
+stat-inference = { path = "crates/stat-inference" }
+stat-mixed = { path = "crates/stat-mixed" }
+stat-viz = { path = "crates/stat-viz" }
+stat-timeseries = { path = "crates/stat-timeseries" }
+stat-functional = { path = "crates/stat-functional" }
+stat-text = { path = "crates/stat-text" }
+stat-bayes = { path = "crates/stat-bayes" }
+stat-signal = { path = "crates/stat-signal" }
+# Without its database drivers and web access; stat-script and app-gui turn
+# them on (`features = ["default"]`), and the web build check leaves them off.
+app-model = { path = "crates/app-model", default-features = false }
+# Without its external-data feature; app-gui turns it on for native builds.
+stat-script = { path = "crates/stat-script", default-features = false }
+rayon = "1.10"
+
+[workspace.lints.rust]
+# Denied everywhere; the one exception is the documented macOS file-opening
+# bridge in app-gui (`macos_open`), which allows it locally.
+unsafe_code = "deny"
+missing_docs = "warn"
+missing_debug_implementations = "warn"
+
+[workspace.lints.clippy]
+all = { level = "warn", priority = -1 }
+# Numerical code legitimately mixes index arithmetic and float conversions.
+cast_precision_loss = "allow"
+many_single_char_names = "allow"
+needless_range_loop = "allow"
+
+# The web dashboard viewer (scripts/build-web-viewer.sh): smaller rather than
+# fastest, since the whole app is downloaded by every viewer.
+[profile.wasm-release]
+inherits = "release"
+opt-level = "s"
+lto = true
+codegen-units = 1
+strip = true
+
+# Builds handed to users (scripts/build-macos-app.sh): whole-program
+# optimization across crates, which takes longer to build than `--release`
+# but runs the numerical code faster. Day-to-day `cargo run --release` stays
+# quick to build.
+[profile.dist]
+inherits = "release"
+lto = "thin"
+codegen-units = 1
+
+[profile.test]
+opt-level = 2
+
+# The numerical kernels are slow unoptimized (the studentized range, noncentral
+# distributions and power searches evaluate thousands of special functions), so
+# they are optimized even in development builds of the application.
+[profile.dev.package.stat-core]
+opt-level = 3
+
+[profile.dev.package.stat-inference]
+opt-level = 3
+
+# The design searches (space-filling, optimal) run while a dialog previews them.
+[profile.dev.package.stat-doe]
+opt-level = 3
+
+# The sampler runs while a Bayesian report is open.
+[profile.dev.package.stat-bayes]
+opt-level = 3

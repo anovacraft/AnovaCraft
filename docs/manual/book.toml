@@ -1,0 +1,21 @@
+[book]
+title = "AnovaCraft Reference Manual"
+authors = ["AnovaCraft contributors"]
+language = "en"
+multilingual = false
+src = "src"
+description = "Everything AnovaCraft does, in detail: options, methods, report sections and scripting."
+
+[build]
+build-dir = "book"
+create-missing = false
+
+[output.html]
+default-theme = "light"
+preferred-dark-theme = "navy"
+additional-css = ["pictures.css"]
+git-repository-url = "https://github.com/anovacraft/AnovaCraft"
+edit-url-template = "https://github.com/anovacraft/AnovaCraft/edit/main/docs/manual/{path}"
+
+[output.html.search]
+enable = true

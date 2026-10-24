@@ -1,0 +1,14 @@
+[package]
+name = "stat-core"
+description = "Core numerical kernels for the statistical engine: dense matrices, QR factorization, special functions, probability distributions and distribution fitting."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+publish.workspace = true
+
+[dependencies]
+rayon.workspace = true
+
+[lints]
+workspace = true

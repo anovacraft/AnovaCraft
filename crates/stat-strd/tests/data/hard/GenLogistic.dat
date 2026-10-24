@@ -1,0 +1,47 @@
+Synthetic StRD-layout file (invented data; NOT a NIST dataset)
+Dataset Name:  GenLogistic (GenLogistic.dat)
+
+Procedure:     Nonlinear Least Squares Regression
+
+Data:          1 Response Variable  (y)
+               1 Predictor Variable (x)
+               15 Observations
+               Higher Level of Difficulty
+               Generated Data
+
+Model:         Synthetic Class
+               4 Parameters (b1 to b4)
+
+               y = b1 / ((1+exp[b2-b3*x])**(1/b4))  +  e
+
+
+          Starting values                  Certified Values
+
+        Start 1     Start 2           Parameter     Standard Deviation
+  b1 =   100         700             6.8786999268E+02  3.3662490129E+00
+  b2 =   10          5               5.8455317755E+00  4.8985223161E-01
+  b3 =   1           0.75            8.1878392628E-01  4.7853136959E-02
+  b4 =   1           1.3             1.4795883503E+00  1.6589630391E-01
+
+Residual Sum of Squares:                    4.1315452941E+02
+Residual Standard Deviation:                6.1285808042E+00
+Degrees of Freedom:                                11
+Number of Observations:                            15
+
+
+Data:   y               x
+      21.609290      1.0000
+      48.285095      2.0000
+      62.174412      3.0000
+      109.044013      4.0000
+      193.023448      5.0000
+      296.326510      6.0000
+      414.710056      7.0000
+      516.202143      8.0000
+      602.616420      9.0000
+      655.959997      10.0000
+      665.002850      11.0000
+      684.756288      12.0000
+      679.317974      13.0000
+      687.112214      14.0000
+      684.060813      15.0000

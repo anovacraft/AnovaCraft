@@ -1,0 +1,18 @@
+[package]
+name = "stat-reliability"
+description = "Survival and reliability analysis: Kaplan–Meier product-limit estimates with Greenwood confidence bands, the log-rank test, and censored maximum-likelihood life-distribution fits with right, left and interval censoring, the Turnbull estimate, reliability growth, repairable systems and test plans."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+publish.workspace = true
+
+[dependencies]
+stat-core.workspace = true
+stat-mixed.workspace = true
+
+[lints]
+workspace = true
+
+[dev-dependencies]
+stat-data.workspace = true

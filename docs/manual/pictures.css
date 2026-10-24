@@ -1,0 +1,9 @@
+/* Screenshots: always at their own proportions (never a forced height),
+   no wider than the text, with a thin frame so a light window stands out
+   from the page. */
+.content img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid var(--table-border-color);
+  border-radius: 6px;
+}

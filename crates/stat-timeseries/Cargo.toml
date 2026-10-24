@@ -1,0 +1,17 @@
+[package]
+name = "stat-timeseries"
+description = "Time series analysis: autocorrelation, differencing, decomposition (classical and STL), unit-root and stationarity tests, trend models, exponential smoothing in state-space form, exact-likelihood seasonal ARIMA with automatic order search, forecasts with prediction intervals, spectral analysis and cross-correlation."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+publish.workspace = true
+
+[dependencies]
+stat-core.workspace = true
+
+[lints]
+workspace = true
+
+[dev-dependencies]
+stat-data.workspace = true

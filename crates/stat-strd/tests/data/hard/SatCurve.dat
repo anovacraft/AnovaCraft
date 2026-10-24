@@ -1,0 +1,36 @@
+Synthetic StRD-layout file (invented data; NOT a NIST dataset)
+Dataset Name:  SatCurve (SatCurve.dat)
+
+Procedure:     Nonlinear Least Squares Regression
+
+Data:          1 Response Variable  (y)
+               1 Predictor Variable (x)
+               6 Observations
+               Higher Level of Difficulty
+               Generated Data
+
+Model:         Synthetic Class
+               2 Parameters (b1 to b2)
+
+               y = b1*(1-exp[-b2*x])  +  e
+
+
+          Starting values                  Certified Values
+
+        Start 1     Start 2           Parameter     Standard Deviation
+  b1 =   1           100             2.0189914040E+02  2.3169362447E+00
+  b2 =   1           0.75            6.1016309779E-01  2.4491465511E-02
+
+Residual Sum of Squares:                    4.6518102342E+01
+Residual Standard Deviation:                3.4102090237E+00
+Degrees of Freedom:                                4
+Number of Observations:                            6
+
+
+Data:   y               x
+      90.124452      1.0000
+      145.683406      2.0000
+      168.803715      3.0000
+      188.696263      5.0000
+      203.011367      7.0000
+      200.229759      10.0000

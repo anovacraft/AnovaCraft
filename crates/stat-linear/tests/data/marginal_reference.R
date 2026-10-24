@@ -1,0 +1,37 @@
+# Reference values for crates/stat-linear/tests/marginal_reference.rs.
+# R 4.3.3 with emmeans 1.10.0. Run: Rscript marginal_reference.R
+library(emmeans)
+emm_options(opt.digits = FALSE)
+p <- function(name, v) cat(name, "=", paste(sprintf("%.17g", v), collapse = ", "), "\n")
+A <- factor(c("a1","a1","a1","a1","a2","a2","a2","a2","a2","a3","a3","a3","a3","a3","a3","a1","a2","a3","a1","a2"))
+B <- factor(c("b1","b2","b1","b2","b1","b2","b1","b2","b2","b1","b2","b1","b2","b1","b1","b2","b1","b2","b1","b2"))
+z <- c(3.2, 4.1, 2.8, 5.0, 3.9, 4.4, 3.1, 2.7, 5.2, 4.8, 3.3, 3.9, 4.6, 2.9, 3.5, 4.0, 4.2, 3.7, 3.0, 4.9)
+y <- c(10.1, 12.3, 9.8, 13.9, 11.2, 15.1, 10.9, 13.0, 16.2, 14.8, 12.1, 14.0, 13.5, 13.2, 14.1, 12.8, 11.9, 12.6, 10.4, 15.6)
+m <- lm(y ~ A * B + z)
+jt <- joint_tests(m, by = "B")
+p("slice_B_F", jt$F.ratio[jt$`model term` == "A"]); p("slice_B_p", jt$p.value[jt$`model term` == "A"])
+p("slice_B_df2", jt$df2[1])
+e <- emmeans(m, ~ A | B)
+s <- summary(e); p("lsmeans", s$emmean); p("lsmeans_se", s$SE); p("lsmeans_lower", s$lower.CL)
+for (adj in c("tukey", "holm", "bonferroni", "none")) {
+  pr <- summary(pairs(e, adjust = adj), infer = TRUE)
+  p(paste0("pairs_", adj, "_est"), pr$estimate); p(paste0("pairs_", adj, "_se"), pr$SE)
+  p(paste0("pairs_", adj, "_p"), pr$p.value); p(paste0("pairs_", adj, "_lower"), pr$lower.CL)
+}
+jt2 <- joint_tests(m, by = "A")
+p("slice_A_F", jt2$F.ratio[jt2$`model term` == "B"]); p("slice_A_p", jt2$p.value[jt2$`model term` == "B"])
+# Separate slopes: y ~ A * z.
+ms <- lm(y ~ A * z)
+tr <- summary(emtrends(ms, ~ A, var = "z"), infer = TRUE)
+p("slopes", tr$z.trend); p("slopes_se", tr$SE); p("slopes_lower", tr$lower.CL); p("slopes_p", tr$p.value)
+tp <- summary(pairs(emtrends(ms, ~ A, var = "z"), adjust = "tukey"), infer = TRUE)
+p("slope_pairs_est", tp$estimate); p("slope_pairs_p", tp$p.value); p("slope_pairs_lower", tp$lower.CL)
+av <- anova(lm(y ~ A + z + A:z))
+p("equal_slopes_F", av["A:z", "F value"]); p("equal_slopes_p", av["A:z", "Pr(>F)"])
+# Poisson GLM: slices on the link scale (z tests).
+cnt <- c(3, 5, 2, 7, 4, 9, 3, 6, 8, 7, 4, 6, 5, 4, 6, 6, 5, 4, 2, 9)
+g <- glm(cnt ~ A * B, family = poisson)
+jg <- joint_tests(g, by = "B")
+p("glm_slice_F", jg$F.ratio[jg$`model term` == "A"]); p("glm_slice_p", jg$p.value[jg$`model term` == "A"])
+pg <- summary(pairs(emmeans(g, ~ A | B), adjust = "tukey"), infer = TRUE)
+p("glm_pairs_est", pg$estimate); p("glm_pairs_p", pg$p.value); p("glm_pairs_lower", pg$asymp.LCL)

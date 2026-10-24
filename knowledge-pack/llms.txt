@@ -1,0 +1,21 @@
+# AnovaCraft
+
+> AnovaCraft is an open-source statistics application written in Rust: descriptive statistics, tests, linear and generalized models, mixed models, predictive models, multivariate methods, design of experiments, quality and reliability tools, time series and text analysis, with linked interactive plots and Rhai scripting.
+
+Knowledge pack built from https://github.com/anovacraft/AnovaCraft at commit ac2210e (2026-10-24). Give an assistant all eight files below (about 415k words without the essentials file), or only `00-essentials.md` (about 14k words) when it accepts less. Ask it to answer from these files.
+
+## Files
+
+- [00-essentials.md](00-essentials.md): Short version: overview, glossary, every menu item in plain language, crate list. Use alone when the assistant accepts little text. (about 14k words)
+- [01-overview-and-glossary.md](01-overview-and-glossary.md): What AnovaCraft is, project facts, menus and a glossary. (about 1k words)
+- [02-menus-and-features.md](02-menus-and-features.md): Every menu item in plain language, then the complete feature list by menu. (about 41k words)
+- [03-reference-manual.md](03-reference-manual.md): The full Reference Manual: data, reports, plots, every analysis, formulas and scripting reference. (about 130k words)
+- [04-validation.md](04-validation.md): How each statistical routine is verified: reference data, tolerances and tests. (about 32k words)
+- [05-design-and-gui-conventions.md](05-design-and-gui-conventions.md): Clean-room rules, layout, plot navigation, brushing, colours, dialogs and report conventions. (about 6k words)
+- [06-architecture-and-code-map.md](06-architecture-and-code-map.md): Crates, modules and public items with their doc lines (no source). (about 188k words)
+- [07-development-guide.md](07-development-guide.md): Building, testing, project rules, roadmap, maintenance, CI and scripts. (about 13k words)
+- [anovacraft-knowledge-pack.md](anovacraft-knowledge-pack.md): All seven parts (01–07) in one self-contained file, for assistants that take one upload. (about 415k words)
+
+## Optional
+
+- [Source code](https://github.com/anovacraft/AnovaCraft): the repository itself, for questions the pack cannot answer.

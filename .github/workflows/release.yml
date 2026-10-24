@@ -1,0 +1,73 @@
+name: Release
+
+# Pushing a version tag (v0.1.0, …), or running this workflow by hand with a
+# version (Actions ▸ Release ▸ Run workflow; the tag is then created on the
+# chosen commit), builds the macOS and Windows apps and attaches them to a
+# draft GitHub Release, which is published by hand after a last look.
+on:
+  push:
+    tags: ['v*']
+  workflow_dispatch:
+    inputs:
+      version:
+        description: Version tag to create, such as v0.1.0
+        required: true
+
+permissions:
+  contents: write
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  macos:
+    name: macOS app (universal)
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: aarch64-apple-darwin,x86_64-apple-darwin
+      - run: ./scripts/build-macos-app.sh universal
+      - uses: actions/upload-artifact@v4
+        with:
+          name: macos
+          path: dist/*.zip
+
+  windows:
+    name: Windows app (x64)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: x86_64-pc-windows-gnu
+      - name: MinGW-w64
+        run: sudo apt-get update && sudo apt-get install -y mingw-w64 zip
+      - run: ./scripts/build-windows-exe.sh
+      - uses: actions/upload-artifact@v4
+        with:
+          name: windows
+          path: dist/*.zip
+
+  release:
+    name: Draft release
+    needs: [macos, windows]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/download-artifact@v4
+        with:
+          path: dist
+          merge-multiple: true
+      - name: Create the draft release with both zips
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ inputs.version || github.ref_name }}
+        run: |
+          tag="$TAG"
+          version="${tag#v}"
+          # Notes: this version's section of CHANGELOG.md.
+          awk -v v="$version" '$0 ~ "^## "v {on=1; next} /^## / {on=0} on' CHANGELOG.md > notes.md
+          gh release create "$tag" dist/*.zip --draft --target "$GITHUB_SHA" \
+            --title "AnovaCraft $version" --notes-file notes.md

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<office:document xmlns:office="urn:oasis:names:tc:opendocument:xmlns:office:1.0"
+  xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0"
+  xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0"
+  xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0"
+  xmlns:number="urn:oasis:names:tc:opendocument:xmlns:datastyle:1.0"
+  office:version="1.3" office:mimetype="application/vnd.oasis.opendocument.spreadsheet">
+ <office:automatic-styles>
+  <number:date-style style:name="Nd"><number:year number:style="long"/><number:text>-</number:text><number:month number:style="long"/><number:text>-</number:text><number:day number:style="long"/></number:date-style>
+  <number:date-style style:name="Ndt"><number:year number:style="long"/><number:text>-</number:text><number:month number:style="long"/><number:text>-</number:text><number:day number:style="long"/><number:text> </number:text><number:hours number:style="long"/><number:text>:</number:text><number:minutes number:style="long"/><number:text>:</number:text><number:seconds number:style="long"/></number:date-style>
+  <number:time-style style:name="Nt"><number:hours number:style="long"/><number:text>:</number:text><number:minutes number:style="long"/><number:text>:</number:text><number:seconds number:style="long"/></number:time-style>
+  <number:time-style style:name="Ndur" number:truncate-on-overflow="false"><number:hours/><number:text>:</number:text><number:minutes number:style="long"/><number:text>:</number:text><number:seconds number:style="long"/></number:time-style>
+  <style:style style:name="d" style:family="table-cell" style:data-style-name="Nd"/>
+  <style:style style:name="dt" style:family="table-cell" style:data-style-name="Ndt"/>
+  <style:style style:name="t" style:family="table-cell" style:data-style-name="Nt"/>
+  <style:style style:name="dur" style:family="table-cell" style:data-style-name="Ndur"/>
+ </office:automatic-styles>
+ <office:body><office:spreadsheet>
+  <table:calculation-settings><table:null-date table:date-value="1899-12-30"/></table:calculation-settings>
+  <table:table table:name="dates"><table:table-row><table:table-cell office:value-type="string"><text:p>date</text:p></table:table-cell><table:table-cell office:value-type="string"><text:p>stamp</text:p></table:table-cell><table:table-cell office:value-type="string"><text:p>clock</text:p></table:table-cell><table:table-cell office:value-type="string"><text:p>took</text:p></table:table-cell></table:table-row><table:table-row><table:table-cell office:value-type="date" office:date-value="2026-10-13" table:style-name="d"/><table:table-cell office:value-type="date" office:date-value="2026-10-13T15:57:58" table:style-name="dt"/><table:table-cell office:value-type="time" office:time-value="PT15H57M58S" table:style-name="t"/><table:table-cell office:value-type="time" office:time-value="PT1H30M" table:style-name="dur"/></table:table-row><table:table-row><table:table-cell office:value-type="date" office:date-value="1900-03-01" table:style-name="d"/><table:table-cell office:value-type="date" office:date-value="1900-03-02T06:00:00" table:style-name="dt"/><table:table-cell office:value-type="time" office:time-value="PT00H00M01S" table:style-name="t"/><table:table-cell office:value-type="time" office:time-value="PT36H" table:style-name="dur"/></table:table-row><table:table-row><table:table-cell office:value-type="date" office:date-value="2000-02-29" table:style-name="d"/><table:table-cell office:value-type="date" office:date-value="2099-12-31T23:59:59" table:style-name="dt"/><table:table-cell office:value-type="time" office:time-value="PT12H" table:style-name="t"/><table:table-cell office:value-type="time" office:time-value="PT0S" table:style-name="dur"/></table:table-row><table:table-row><table:table-cell office:value-type="date" office:date-value="1904-01-02" table:style-name="d"/><table:table-cell office:value-type="date" office:date-value="1970-01-01T00:00:00" table:style-name="dt"/><table:table-cell office:value-type="time" office:time-value="PT23H59M59S" table:style-name="t"/><table:table-cell office:value-type="time" office:time-value="P2DT3H15M" table:style-name="dur"/></table:table-row></table:table>
+ </office:spreadsheet></office:body>
+</office:document>

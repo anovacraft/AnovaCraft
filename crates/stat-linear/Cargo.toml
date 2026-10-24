@@ -1,0 +1,15 @@
+[package]
+name = "stat-linear"
+description = "Linear models for the statistical engine: ordinary least squares with full inference and diagnostics."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+publish.workspace = true
+
+[dependencies]
+stat-core.workspace = true
+stat-data.workspace = true
+
+[lints]
+workspace = true

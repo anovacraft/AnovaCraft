@@ -1,0 +1,7 @@
+/target
+
+# macOS Finder metadata
+.DS_Store
+
+# Built macOS app bundles
+/dist

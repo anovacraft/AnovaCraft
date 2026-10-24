@@ -1,0 +1,18 @@
+[package]
+name = "stat-functional"
+description = "Functional data analysis: curves from long data smoothed by B-spline, penalized-spline or Fourier bases with the roughness penalty chosen by GCV; landmark and continuous registration; functional principal components."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+publish.workspace = true
+
+[dependencies]
+stat-core.workspace = true
+rayon.workspace = true
+
+[dev-dependencies]
+stat-data.workspace = true
+
+[lints]
+workspace = true

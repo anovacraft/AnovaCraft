@@ -1,0 +1,21 @@
+[book]
+title = "AnovaCraft Quick Guide"
+authors = ["AnovaCraft contributors"]
+language = "en"
+multilingual = false
+src = "src"
+description = "Every AnovaCraft menu item in plain language, for people new to the app or to statistics."
+
+[build]
+build-dir = "book"
+create-missing = false
+
+[output.html]
+default-theme = "light"
+preferred-dark-theme = "navy"
+additional-css = ["pictures.css"]
+git-repository-url = "https://github.com/anovacraft/AnovaCraft"
+edit-url-template = "https://github.com/anovacraft/AnovaCraft/edit/main/docs/guide/{path}"
+
+[output.html.search]
+enable = true

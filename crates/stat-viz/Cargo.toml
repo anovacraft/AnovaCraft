@@ -1,0 +1,32 @@
+[package]
+name = "stat-viz"
+description = "Graph canvas engine: variable encodings, faceting, axis scales and composable chart elements (points, fit lines, smoothers, box plots), with optional egui_plot rendering."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+publish.workspace = true
+
+[dependencies]
+# PNG figures: paths, text and file encoding.
+ab_glyph = "0.2"
+png = "0.18"
+# Compressed bitmaps (image plots) inside PDF figures.
+miniz_oxide = "0.8"
+tiny-skia = { version = "0.11", default-features = false, features = ["std", "simd"] }
+stat-core.workspace = true
+stat-data.workspace = true
+stat-inference.workspace = true
+stat-linear.workspace = true
+stat-multivariate.workspace = true
+# Individuals-chart limits for reference lines.
+stat-quality.workspace = true
+# Rendering into egui_plot (used by app-gui); the engine itself needs neither.
+egui = { version = "0.31", optional = true }
+egui_plot = { version = "0.31", optional = true }
+
+[features]
+egui = ["dep:egui", "dep:egui_plot"]
+
+[lints]
+workspace = true

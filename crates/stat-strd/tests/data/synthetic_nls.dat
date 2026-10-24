@@ -1,0 +1,47 @@
+Synthetic StRD-layout file (invented data; NOT a NIST dataset)
+Dataset Name:  Synthetic (synthetic_nls.dat)
+
+Procedure:     Nonlinear Least Squares Regression
+
+Description:   Invented data written by synthetic_nls.py; the "certified"
+               values were computed with SciPy least_squares.
+
+Data:          1 Response Variable  (y)
+               1 Predictor Variable (x)
+               14 Observations
+               Lower Level of Difficulty
+               Generated Data
+
+Model:         Exponential Class
+               2 Parameters (b1 to b2)
+
+               y = b1*(1-exp[-b2*x])  +  e
+
+
+          Starting values                  Certified Values
+
+        Start 1     Start 2           Parameter     Standard Deviation
+  b1 =   500         250           2.4539769866E+02  3.0849812795E+00
+  b2 =   0.0001      0.0005        5.8462011740E-04  8.6500015415E-06
+
+Residual Sum of Squares:                    2.0446712082E-01
+Residual Standard Deviation:                1.3053323996E-01
+Degrees of Freedom:                                12
+Number of Observations:                            14
+
+
+Data:   y               x
+           10.96            77.6
+           15.83           114.9
+           19.59           141.1
+           26.10           190.8
+           31.88           239.9
+           38.01           289.0
+           43.46           332.8
+           48.70           378.4
+           55.11           434.8
+           59.64           477.3
+           66.22           536.8
+           71.98           593.1
+           81.28           689.1
+           88.05           760.0

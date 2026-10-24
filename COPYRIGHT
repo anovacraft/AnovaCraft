@@ -1,0 +1,16 @@
+AnovaCraft
+Copyright (c) 2026 The AnovaCraft authors
+
+AnovaCraft is licensed under either of
+
+  * the Apache License, Version 2.0 (LICENSE-APACHE or
+    https://www.apache.org/licenses/LICENSE-2.0), or
+  * the MIT license (LICENSE-MIT or https://opensource.org/licenses/MIT),
+
+at your option. Unless you state otherwise, any contribution you submit for
+inclusion in AnovaCraft is licensed as above, without any additional terms or
+conditions.
+
+The application also contains third-party software, fonts, icons and data
+under their own licences; THIRD-PARTY-NOTICES.txt lists them with their
+copyright notices and licence texts (scripts/build-notices.py regenerates it).

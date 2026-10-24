@@ -1,0 +1,401 @@
+Patient,Programme,Age,Sex,Severity,Smoker,Region,Age group,Fitness gain,Readmitted,Clinic visits
+1,Enrolled,61,M,4.7,No,East,Under 65,9.2,0,9
+2,Enrolled,58,F,5.3,No,South,Under 65,14.2,0,5
+3,Usual care,65,M,7.8,Yes,South,65 and over,2.2,0,5
+4,Enrolled,56,F,1.2,Yes,North,Under 65,12.3,0,2
+5,Usual care,76,M,6.7,No,North,65 and over,3.5,0,7
+6,Enrolled,69,F,5.2,No,South,65 and over,6.4,0,5
+7,Enrolled,65,F,1.0,Yes,East,65 and over,18.8,1,2
+8,Usual care,83,F,7.3,No,North,65 and over,0.9,1,4
+9,Usual care,74,M,6.1,No,East,65 and over,15.1,1,8
+10,Enrolled,59,M,2.9,Yes,North,Under 65,14.2,1,3
+11,Enrolled,68,F,2.1,No,South,65 and over,16.0,0,4
+12,Usual care,65,M,4.0,No,South,65 and over,15.7,0,2
+13,Enrolled,63,M,5.0,No,East,Under 65,12.3,1,8
+14,Usual care,55,M,5.1,No,North,Under 65,5.5,0,3
+15,Enrolled,57,M,2.9,Yes,North,Under 65,15.6,0,4
+16,Usual care,68,F,7.9,No,East,65 and over,6.8,0,2
+17,Usual care,52,F,3.3,No,South,Under 65,12.4,0,3
+18,Enrolled,76,F,4.8,No,East,65 and over,6.5,1,3
+19,Enrolled,54,F,5.2,No,North,Under 65,14.6,0,4
+20,Usual care,73,M,6.1,No,East,65 and over,7.3,1,2
+21,Usual care,61,M,1.7,No,North,Under 65,18.1,1,2
+22,Enrolled,52,F,7.2,No,East,Under 65,15.9,1,6
+23,Usual care,64,M,6.4,No,North,Under 65,4.1,0,3
+24,Enrolled,65,M,7.8,No,South,65 and over,11.9,1,6
+25,Usual care,71,M,3.5,Yes,North,65 and over,11.9,0,3
+26,Usual care,58,F,9.5,No,South,Under 65,6.8,0,5
+27,Usual care,67,M,3.8,Yes,South,65 and over,8.8,0,2
+28,Enrolled,64,M,5.8,No,South,Under 65,12.7,0,3
+29,Usual care,74,M,5.3,Yes,North,65 and over,8.3,0,3
+30,Usual care,66,F,4.3,No,South,65 and over,9.1,1,2
+31,Usual care,53,M,3.1,No,North,Under 65,7.1,0,1
+32,Enrolled,61,M,3.8,No,South,Under 65,10.8,0,1
+33,Enrolled,50,M,1.8,No,East,Under 65,12.3,0,2
+34,Usual care,67,M,3.1,Yes,South,65 and over,12.0,1,5
+35,Enrolled,63,F,1.8,Yes,South,Under 65,15.3,0,2
+36,Enrolled,62,M,3.8,No,North,Under 65,13.3,0,3
+37,Enrolled,62,F,8.5,No,South,Under 65,12.1,1,8
+38,Usual care,56,M,4.0,No,East,Under 65,8.6,0,4
+39,Enrolled,53,F,0.5,No,East,Under 65,17.3,0,1
+40,Usual care,73,M,4.2,No,North,65 and over,8.5,0,2
+41,Usual care,68,F,7.6,No,North,65 and over,10.3,0,1
+42,Usual care,80,M,5.1,No,North,65 and over,10.2,1,3
+43,Enrolled,63,M,3.9,No,South,Under 65,12.8,0,3
+44,Enrolled,51,F,7.9,Yes,South,Under 65,15.0,0,4
+45,Enrolled,68,F,2.9,No,East,65 and over,8.6,1,2
+46,Usual care,74,F,3.6,No,North,65 and over,6.6,0,3
+47,Usual care,58,M,4.1,Yes,North,Under 65,4.8,0,0
+48,Usual care,71,F,3.8,No,North,65 and over,7.6,0,1
+49,Usual care,60,M,8.1,No,East,Under 65,7.6,1,2
+50,Usual care,45,F,5.0,No,South,Under 65,18.0,0,1
+51,Enrolled,73,F,7.9,No,East,65 and over,9.3,1,11
+52,Usual care,75,F,3.2,Yes,South,65 and over,10.0,1,4
+53,Enrolled,60,F,5.6,Yes,South,Under 65,17.6,0,9
+54,Enrolled,64,M,1.4,No,South,Under 65,16.4,0,1
+55,Enrolled,52,F,3.5,No,North,Under 65,14.5,0,9
+56,Enrolled,67,F,2.6,No,North,65 and over,13.9,0,5
+57,Usual care,68,M,3.7,No,North,65 and over,17.3,0,5
+58,Usual care,67,F,7.3,Yes,North,65 and over,6.6,1,4
+59,Enrolled,65,F,1.4,No,South,65 and over,16.1,0,2
+60,Usual care,79,F,8.1,Yes,South,65 and over,3.1,0,2
+61,Enrolled,60,M,0.6,No,North,Under 65,13.9,0,2
+62,Usual care,52,M,3.6,Yes,North,Under 65,16.7,0,2
+63,Usual care,66,M,6.0,No,North,65 and over,3.5,0,5
+64,Enrolled,72,M,4.3,No,South,65 and over,8.3,1,7
+65,Enrolled,61,F,3.5,No,East,Under 65,20.7,0,3
+66,Usual care,60,M,7.3,Yes,South,Under 65,5.3,0,4
+67,Usual care,79,M,2.1,No,North,65 and over,9.2,1,1
+68,Enrolled,65,F,1.1,No,South,65 and over,12.3,0,1
+69,Usual care,75,F,4.0,No,North,65 and over,8.5,0,2
+70,Usual care,58,F,5.3,Yes,South,Under 65,13.7,0,2
+71,Usual care,61,M,6.7,No,South,Under 65,5.9,0,3
+72,Enrolled,75,M,2.7,Yes,South,65 and over,4.6,0,5
+73,Usual care,78,F,3.8,No,South,65 and over,4.8,0,2
+74,Usual care,58,F,4.2,No,South,Under 65,19.8,0,4
+75,Enrolled,64,F,3.3,No,South,Under 65,18.2,1,8
+76,Enrolled,58,M,1.1,No,East,Under 65,20.3,0,5
+77,Usual care,65,F,4.3,No,North,65 and over,16.1,1,5
+78,Enrolled,65,F,3.8,No,North,65 and over,19.5,0,3
+79,Usual care,71,M,5.4,No,East,65 and over,12.4,1,2
+80,Usual care,75,F,1.8,No,East,65 and over,9.9,0,2
+81,Enrolled,73,M,6.1,No,East,65 and over,9.9,1,4
+82,Enrolled,70,F,2.5,No,East,65 and over,16.9,0,7
+83,Usual care,64,M,5.8,No,North,Under 65,8.4,0,0
+84,Usual care,71,F,6.1,Yes,North,65 and over,6.8,0,0
+85,Usual care,67,M,3.9,Yes,East,65 and over,9.4,1,4
+86,Usual care,36,F,5.4,Yes,South,Under 65,12.3,0,0
+87,Usual care,61,M,8.5,No,South,Under 65,7.7,0,3
+88,Enrolled,57,M,2.5,No,East,Under 65,16.6,0,3
+89,Enrolled,70,M,5.2,Yes,North,65 and over,12.2,1,4
+90,Enrolled,66,M,3.4,Yes,North,65 and over,8.1,0,4
+91,Usual care,68,F,5.5,Yes,South,65 and over,8.7,0,1
+92,Usual care,80,F,5.7,No,East,65 and over,8.6,0,6
+93,Enrolled,62,F,4.5,Yes,East,Under 65,21.4,0,5
+94,Enrolled,69,M,2.3,Yes,North,65 and over,10.3,0,6
+95,Enrolled,58,M,5.9,Yes,North,Under 65,13.1,0,8
+96,Usual care,51,M,7.3,No,South,Under 65,8.9,0,2
+97,Enrolled,69,F,0.5,Yes,South,65 and over,16.6,0,4
+98,Enrolled,52,F,2.3,No,South,Under 65,19.7,0,1
+99,Enrolled,41,M,8.3,Yes,East,Under 65,12.2,0,4
+100,Usual care,59,M,7.6,No,South,Under 65,8.3,1,5
+101,Usual care,46,M,7.7,Yes,East,Under 65,12.2,1,3
+102,Enrolled,69,F,4.2,Yes,South,65 and over,14.3,0,4
+103,Usual care,57,M,8.8,No,East,Under 65,13.3,1,3
+104,Enrolled,57,F,6.5,No,North,Under 65,11.6,0,4
+105,Enrolled,75,M,7.1,No,North,65 and over,7.9,0,13
+106,Usual care,57,F,3.7,No,South,Under 65,9.9,0,3
+107,Usual care,72,M,4.8,Yes,East,65 and over,7.5,1,2
+108,Usual care,65,M,5.0,No,South,65 and over,12.2,0,3
+109,Enrolled,71,M,1.7,No,South,65 and over,16.1,0,6
+110,Enrolled,70,M,8.1,No,South,65 and over,3.3,0,5
+111,Usual care,59,M,6.9,No,South,Under 65,8.9,1,4
+112,Enrolled,62,M,7.3,No,South,Under 65,15.0,0,8
+113,Usual care,68,F,4.7,Yes,South,65 and over,10.6,1,4
+114,Usual care,65,F,3.0,No,North,65 and over,12.7,0,3
+115,Usual care,60,M,4.2,No,South,Under 65,8.3,0,2
+116,Enrolled,67,M,8.8,No,North,65 and over,9.4,0,4
+117,Enrolled,77,F,2.4,Yes,East,65 and over,14.9,0,4
+118,Enrolled,54,F,5.8,No,North,Under 65,13.6,0,4
+119,Usual care,76,M,2.2,Yes,East,65 and over,9.6,0,6
+120,Enrolled,62,F,5.2,Yes,North,Under 65,16.6,0,7
+121,Enrolled,58,F,4.9,No,North,Under 65,13.4,0,3
+122,Usual care,64,M,6.9,Yes,South,Under 65,6.7,0,3
+123,Usual care,68,F,6.0,No,North,65 and over,6.6,0,2
+124,Enrolled,52,M,5.0,No,South,Under 65,16.5,0,4
+125,Enrolled,64,F,3.9,Yes,East,Under 65,17.1,0,6
+126,Usual care,59,F,0.5,Yes,East,Under 65,18.3,0,2
+127,Enrolled,56,F,7.8,No,North,Under 65,16.2,1,11
+128,Enrolled,66,M,2.6,No,East,65 and over,13.2,0,6
+129,Enrolled,51,F,5.1,No,North,Under 65,11.9,0,3
+130,Usual care,56,F,5.1,No,South,Under 65,10.2,0,4
+131,Usual care,74,F,5.4,No,East,65 and over,8.4,0,0
+132,Usual care,61,F,9.2,No,East,Under 65,6.3,1,3
+133,Usual care,64,F,7.9,No,North,Under 65,7.7,0,2
+134,Usual care,70,F,5.9,Yes,North,65 and over,8.9,1,2
+135,Usual care,58,M,5.6,Yes,North,Under 65,13.8,0,1
+136,Usual care,74,F,7.6,No,North,65 and over,8.4,1,6
+137,Usual care,81,F,7.9,Yes,East,65 and over,3.7,1,2
+138,Enrolled,53,F,3.8,Yes,East,Under 65,20.1,0,4
+139,Enrolled,69,F,8.4,No,North,65 and over,5.7,0,11
+140,Usual care,72,M,4.5,Yes,North,65 and over,9.5,0,0
+141,Enrolled,60,M,5.9,Yes,North,Under 65,15.1,1,10
+142,Usual care,67,F,6.8,Yes,North,65 and over,10.0,0,2
+143,Enrolled,72,F,4.8,No,South,65 and over,10.4,0,6
+144,Usual care,64,M,7.9,No,North,Under 65,6.7,0,3
+145,Usual care,76,M,5.5,No,South,65 and over,8.9,1,5
+146,Enrolled,70,F,9.8,No,South,65 and over,9.9,0,12
+147,Enrolled,70,F,5.4,Yes,South,65 and over,12.1,0,7
+148,Usual care,51,M,1.8,Yes,North,Under 65,11.7,0,1
+149,Enrolled,65,M,2.9,No,South,65 and over,12.7,1,9
+150,Usual care,72,M,3.1,No,North,65 and over,10.8,0,5
+151,Usual care,70,M,3.7,No,South,65 and over,11.3,0,4
+152,Usual care,59,F,7.9,No,North,Under 65,10.3,1,3
+153,Enrolled,63,F,2.9,No,East,Under 65,17.0,1,1
+154,Enrolled,72,M,1.9,No,North,65 and over,8.5,0,2
+155,Usual care,73,M,7.9,Yes,South,65 and over,4.7,1,3
+156,Usual care,75,F,6.4,No,East,65 and over,9.1,1,1
+157,Enrolled,47,F,6.3,No,East,Under 65,11.3,0,0
+158,Enrolled,61,F,4.4,No,East,Under 65,20.2,1,6
+159,Usual care,66,M,5.3,No,North,65 and over,12.3,0,1
+160,Usual care,60,F,4.0,Yes,South,Under 65,9.8,0,4
+161,Usual care,66,F,4.4,No,East,65 and over,8.7,0,2
+162,Usual care,76,M,5.4,Yes,South,65 and over,6.3,1,4
+163,Usual care,67,F,9.0,No,South,65 and over,4.0,0,1
+164,Usual care,71,M,4.5,Yes,East,65 and over,2.6,1,2
+165,Enrolled,55,M,5.7,Yes,East,Under 65,13.1,0,3
+166,Usual care,62,M,6.1,Yes,South,Under 65,8.9,0,0
+167,Usual care,73,M,4.5,No,North,65 and over,6.1,1,2
+168,Enrolled,61,F,2.9,Yes,North,Under 65,11.5,0,3
+169,Enrolled,61,M,4.0,No,South,Under 65,13.8,1,4
+170,Usual care,57,F,3.4,No,North,Under 65,10.8,0,3
+171,Enrolled,61,M,2.1,No,South,Under 65,20.6,0,2
+172,Usual care,67,M,5.6,No,North,65 and over,9.8,0,6
+173,Usual care,49,M,3.0,No,North,Under 65,16.0,0,2
+174,Enrolled,72,F,3.0,No,South,65 and over,11.9,0,4
+175,Usual care,75,M,6.2,No,East,65 and over,7.0,0,3
+176,Usual care,65,F,8.4,No,East,65 and over,5.1,1,4
+177,Enrolled,63,M,1.4,No,South,Under 65,12.9,0,3
+178,Enrolled,56,F,5.9,No,East,Under 65,16.6,0,6
+179,Usual care,76,M,4.9,Yes,North,65 and over,9.7,0,6
+180,Usual care,68,F,2.4,No,South,65 and over,15.0,0,3
+181,Enrolled,47,F,5.1,No,North,Under 65,21.1,0,4
+182,Usual care,76,F,7.0,No,South,65 and over,13.1,0,4
+183,Enrolled,69,F,3.3,No,North,65 and over,11.9,0,3
+184,Enrolled,45,M,5.9,No,North,Under 65,19.4,1,6
+185,Usual care,62,F,10.0,No,East,Under 65,3.4,1,3
+186,Enrolled,59,F,2.2,Yes,South,Under 65,17.3,0,0
+187,Enrolled,70,M,4.4,Yes,East,65 and over,6.5,0,5
+188,Enrolled,50,F,6.3,No,South,Under 65,15.4,0,4
+189,Enrolled,56,F,3.0,No,South,Under 65,15.6,0,5
+190,Usual care,77,M,4.7,No,South,65 and over,8.1,0,6
+191,Enrolled,57,F,7.0,Yes,South,Under 65,15.5,1,9
+192,Enrolled,60,F,2.8,No,North,Under 65,20.3,0,1
+193,Usual care,60,M,2.9,No,North,Under 65,12.5,0,2
+194,Enrolled,61,M,1.3,No,North,Under 65,15.5,0,5
+195,Enrolled,69,M,2.3,No,North,65 and over,13.1,0,4
+196,Usual care,67,M,0.5,No,South,65 and over,12.4,0,0
+197,Enrolled,53,M,6.2,No,South,Under 65,13.9,0,3
+198,Usual care,69,F,6.4,Yes,South,65 and over,4.2,1,4
+199,Usual care,77,F,9.3,No,East,65 and over,6.2,1,6
+200,Usual care,70,M,0.5,No,North,65 and over,17.1,0,4
+201,Usual care,63,M,6.6,No,East,Under 65,10.4,1,3
+202,Enrolled,60,M,3.7,No,South,Under 65,14.1,0,1
+203,Usual care,62,F,9.1,Yes,North,Under 65,3.7,0,1
+204,Usual care,65,M,5.2,No,East,65 and over,14.7,0,2
+205,Usual care,75,M,2.8,Yes,East,65 and over,11.1,0,2
+206,Usual care,37,M,3.7,No,South,Under 65,11.5,0,0
+207,Enrolled,70,M,8.8,No,North,65 and over,5.2,1,7
+208,Usual care,72,M,5.5,No,East,65 and over,5.6,0,3
+209,Usual care,58,F,6.8,No,South,Under 65,6.5,0,0
+210,Usual care,67,M,8.1,No,South,65 and over,7.1,0,6
+211,Enrolled,76,F,3.1,No,East,65 and over,10.1,0,3
+212,Enrolled,56,M,4.1,No,South,Under 65,21.1,0,3
+213,Enrolled,53,F,4.6,No,East,Under 65,16.9,0,4
+214,Usual care,50,M,6.5,No,North,Under 65,13.5,0,0
+215,Enrolled,59,M,6.1,No,East,Under 65,14.6,0,5
+216,Usual care,58,M,7.3,Yes,East,Under 65,5.6,0,4
+217,Enrolled,57,F,8.8,No,South,Under 65,9.0,0,8
+218,Enrolled,60,M,6.4,Yes,South,Under 65,8.8,1,7
+219,Usual care,69,M,8.8,No,East,65 and over,6.1,0,4
+220,Usual care,64,M,6.0,No,East,Under 65,11.2,0,1
+221,Usual care,76,M,3.9,Yes,East,65 and over,6.5,1,4
+222,Enrolled,66,F,4.7,No,East,65 and over,18.9,0,10
+223,Usual care,62,F,3.8,Yes,South,Under 65,8.1,1,0
+224,Usual care,58,F,4.1,No,South,Under 65,13.2,0,1
+225,Usual care,64,F,4.5,No,East,Under 65,8.1,0,3
+226,Enrolled,61,M,6.5,No,North,Under 65,14.8,0,5
+227,Usual care,72,M,8.5,No,North,65 and over,0.7,1,5
+228,Usual care,58,F,1.4,Yes,South,Under 65,11.3,1,4
+229,Usual care,54,M,4.0,No,North,Under 65,15.7,0,1
+230,Enrolled,57,M,4.0,No,East,Under 65,11.2,0,4
+231,Usual care,62,M,7.3,Yes,East,Under 65,9.6,0,2
+232,Usual care,53,M,3.3,No,North,Under 65,12.3,0,2
+233,Usual care,60,M,6.6,No,North,Under 65,10.4,0,3
+234,Usual care,79,M,7.2,No,North,65 and over,7.0,1,8
+235,Usual care,74,F,8.8,Yes,North,65 and over,2.0,0,4
+236,Enrolled,53,M,7.0,Yes,South,Under 65,14.7,0,3
+237,Enrolled,61,M,5.3,Yes,North,Under 65,10.9,0,8
+238,Usual care,57,M,6.9,Yes,North,Under 65,9.8,1,4
+239,Enrolled,46,M,7.6,No,East,Under 65,16.2,1,5
+240,Usual care,63,M,3.5,No,South,Under 65,17.6,0,4
+241,Enrolled,80,F,3.0,Yes,East,65 and over,13.9,1,4
+242,Enrolled,58,F,2.5,No,East,Under 65,19.7,0,3
+243,Usual care,70,F,6.7,No,South,65 and over,4.5,0,3
+244,Enrolled,70,F,2.4,No,South,65 and over,10.2,0,2
+245,Usual care,57,M,6.1,No,East,Under 65,10.3,0,3
+246,Usual care,53,M,4.3,Yes,South,Under 65,13.4,0,3
+247,Usual care,65,M,5.6,Yes,North,65 and over,10.5,0,1
+248,Enrolled,58,F,1.3,No,North,Under 65,19.5,0,2
+249,Usual care,60,M,6.1,Yes,East,Under 65,11.0,0,1
+250,Usual care,53,M,7.9,No,North,Under 65,7.5,0,5
+251,Usual care,62,M,8.3,Yes,South,Under 65,5.8,0,5
+252,Usual care,54,F,2.7,Yes,East,Under 65,14.7,0,0
+253,Enrolled,59,M,8.3,No,East,Under 65,9.9,0,12
+254,Enrolled,78,M,0.5,No,North,65 and over,12.2,0,4
+255,Enrolled,64,M,6.4,Yes,North,Under 65,15.2,0,6
+256,Usual care,74,F,6.9,Yes,South,65 and over,1.7,1,1
+257,Usual care,62,F,3.3,No,East,Under 65,14.9,0,3
+258,Usual care,59,M,2.7,No,East,Under 65,11.1,0,3
+259,Enrolled,60,F,2.0,No,East,Under 65,15.7,1,4
+260,Usual care,49,M,8.0,No,East,Under 65,13.7,1,2
+261,Usual care,48,F,4.6,Yes,North,Under 65,12.5,0,1
+262,Enrolled,79,F,6.8,No,North,65 and over,4.7,1,13
+263,Usual care,73,M,2.4,No,East,65 and over,10.7,1,3
+264,Usual care,52,M,4.6,No,South,Under 65,12.5,0,3
+265,Usual care,59,M,7.5,No,North,Under 65,7.8,0,1
+266,Usual care,47,M,8.4,Yes,South,Under 65,5.2,1,3
+267,Usual care,60,M,5.3,Yes,North,Under 65,9.6,0,4
+268,Enrolled,63,M,7.3,No,South,Under 65,13.3,0,10
+269,Usual care,56,M,6.2,Yes,East,Under 65,4.0,0,4
+270,Usual care,65,F,0.5,No,North,65 and over,17.3,0,1
+271,Enrolled,59,M,4.9,No,South,Under 65,15.9,0,5
+272,Usual care,82,F,3.7,Yes,North,65 and over,3.9,1,7
+273,Usual care,80,M,6.6,No,South,65 and over,8.2,1,4
+274,Enrolled,54,M,3.2,No,East,Under 65,12.3,0,5
+275,Enrolled,65,M,3.3,No,South,65 and over,11.2,0,9
+276,Enrolled,73,M,5.6,No,South,65 and over,13.4,0,10
+277,Usual care,67,F,5.8,Yes,North,65 and over,10.1,1,4
+278,Usual care,65,M,4.4,No,North,65 and over,5.4,0,2
+279,Usual care,73,F,3.6,No,East,65 and over,14.0,0,2
+280,Usual care,74,M,4.5,Yes,North,65 and over,15.1,1,2
+281,Usual care,66,F,5.6,Yes,South,65 and over,9.7,1,2
+282,Usual care,49,M,3.5,Yes,South,Under 65,10.7,0,2
+283,Usual care,67,M,5.3,No,South,65 and over,12.9,0,3
+284,Enrolled,55,F,6.7,No,North,Under 65,15.9,0,6
+285,Enrolled,61,M,4.7,Yes,South,Under 65,12.2,0,5
+286,Usual care,69,M,6.2,No,North,65 and over,6.6,1,2
+287,Usual care,58,M,4.7,No,North,Under 65,12.3,0,2
+288,Enrolled,61,M,4.2,Yes,South,Under 65,15.2,0,5
+289,Enrolled,56,F,2.3,Yes,North,Under 65,12.3,0,4
+290,Usual care,60,F,4.4,Yes,North,Under 65,5.3,0,3
+291,Usual care,61,M,5.1,No,East,Under 65,10.5,0,2
+292,Usual care,61,M,4.5,No,South,Under 65,10.2,1,3
+293,Usual care,72,M,7.5,No,East,65 and over,2.8,1,3
+294,Usual care,64,F,3.1,Yes,East,Under 65,12.4,0,2
+295,Enrolled,61,M,3.7,No,South,Under 65,9.9,0,2
+296,Usual care,58,M,4.9,No,East,Under 65,11.8,0,2
+297,Enrolled,51,F,3.0,No,North,Under 65,19.0,0,0
+298,Enrolled,66,F,2.4,No,South,65 and over,17.4,0,3
+299,Usual care,68,M,6.4,Yes,North,65 and over,9.3,0,3
+300,Usual care,59,F,5.6,No,North,Under 65,14.5,0,4
+301,Enrolled,60,F,2.2,No,North,Under 65,20.7,0,4
+302,Usual care,75,F,3.7,No,North,65 and over,12.6,0,4
+303,Usual care,78,F,6.7,No,East,65 and over,8.3,0,4
+304,Usual care,59,F,2.3,Yes,East,Under 65,14.1,0,1
+305,Usual care,52,F,3.9,No,North,Under 65,12.9,0,0
+306,Enrolled,66,F,5.1,Yes,North,65 and over,9.4,0,4
+307,Enrolled,72,M,5.9,No,North,65 and over,7.6,0,4
+308,Enrolled,73,F,4.5,No,South,65 and over,14.1,1,8
+309,Usual care,70,M,7.2,No,North,65 and over,6.7,1,1
+310,Usual care,46,M,6.2,Yes,North,Under 65,7.0,0,2
+311,Enrolled,62,F,9.0,No,East,Under 65,10.6,1,5
+312,Usual care,63,F,2.8,No,East,Under 65,18.4,0,2
+313,Usual care,55,M,2.6,No,North,Under 65,16.9,0,2
+314,Usual care,71,M,6.6,No,South,65 and over,13.6,0,0
+315,Usual care,62,M,0.9,No,South,Under 65,12.4,0,1
+316,Usual care,74,F,3.7,No,South,65 and over,12.7,0,1
+317,Usual care,70,F,6.5,Yes,North,65 and over,11.2,0,6
+318,Usual care,63,M,9.3,No,North,Under 65,9.3,0,2
+319,Enrolled,59,F,3.0,No,North,Under 65,17.6,0,7
+320,Enrolled,60,M,4.1,No,South,Under 65,14.3,0,2
+321,Usual care,72,F,5.1,Yes,North,65 and over,-1.0,0,4
+322,Usual care,71,M,9.4,Yes,North,65 and over,8.7,1,9
+323,Enrolled,79,M,5.5,No,South,65 and over,6.6,1,9
+324,Enrolled,64,F,2.8,No,South,Under 65,12.5,0,9
+325,Enrolled,63,F,7.1,Yes,North,Under 65,15.0,0,6
+326,Usual care,58,F,4.5,No,East,Under 65,17.8,0,1
+327,Enrolled,65,F,2.0,Yes,South,65 and over,13.1,0,2
+328,Usual care,69,M,8.4,No,South,65 and over,9.3,1,5
+329,Enrolled,68,F,4.7,No,North,65 and over,14.7,0,6
+330,Usual care,77,M,7.1,No,South,65 and over,9.3,1,5
+331,Usual care,57,M,5.0,No,East,Under 65,10.3,1,1
+332,Usual care,55,F,7.4,No,North,Under 65,11.4,1,1
+333,Usual care,52,M,9.2,Yes,East,Under 65,4.6,1,2
+334,Usual care,66,F,2.5,Yes,East,65 and over,13.0,0,3
+335,Usual care,49,M,6.0,Yes,North,Under 65,10.0,0,2
+336,Usual care,51,M,6.8,Yes,South,Under 65,12.5,0,2
+337,Usual care,59,M,7.0,No,North,Under 65,15.0,1,0
+338,Enrolled,64,F,3.1,No,North,Under 65,12.4,0,9
+339,Usual care,74,M,4.7,No,North,65 and over,8.2,0,5
+340,Enrolled,61,F,5.2,No,East,Under 65,12.8,0,8
+341,Usual care,76,F,8.9,No,East,65 and over,8.7,0,6
+342,Usual care,47,M,2.9,No,South,Under 65,16.1,0,3
+343,Enrolled,60,M,3.7,No,East,Under 65,13.6,0,2
+344,Enrolled,53,M,5.8,Yes,North,Under 65,13.6,0,6
+345,Usual care,57,M,5.9,No,North,Under 65,11.1,1,4
+346,Usual care,56,M,6.9,Yes,South,Under 65,9.8,0,3
+347,Usual care,58,M,2.8,No,North,Under 65,13.2,0,3
+348,Enrolled,56,F,6.0,No,North,Under 65,12.6,0,3
+349,Usual care,78,M,5.9,No,South,65 and over,5.3,0,4
+350,Usual care,59,F,4.9,No,North,Under 65,10.4,0,1
+351,Usual care,68,F,5.9,No,South,65 and over,8.9,0,5
+352,Enrolled,64,F,2.8,No,East,Under 65,13.5,0,3
+353,Enrolled,58,F,6.0,No,North,Under 65,11.6,0,5
+354,Usual care,73,F,8.2,Yes,North,65 and over,4.1,0,5
+355,Usual care,65,M,5.8,Yes,North,65 and over,7.6,0,4
+356,Usual care,56,M,6.7,No,North,Under 65,7.9,1,3
+357,Usual care,59,M,7.3,No,East,Under 65,14.8,0,1
+358,Usual care,69,M,1.0,No,East,65 and over,12.3,0,1
+359,Enrolled,80,M,4.2,Yes,South,65 and over,4.6,1,2
+360,Usual care,73,M,8.1,No,North,65 and over,6.8,1,6
+361,Usual care,57,M,3.5,No,North,Under 65,7.4,0,1
+362,Enrolled,67,F,0.5,Yes,North,65 and over,10.4,0,3
+363,Enrolled,72,M,10.0,No,North,65 and over,9.8,1,11
+364,Usual care,60,M,4.3,No,North,Under 65,14.6,0,2
+365,Enrolled,51,M,4.4,Yes,East,Under 65,15.3,0,6
+366,Usual care,51,F,2.2,Yes,South,Under 65,15.2,0,1
+367,Enrolled,49,F,4.3,No,North,Under 65,24.4,0,5
+368,Usual care,77,M,3.8,No,South,65 and over,10.7,0,1
+369,Enrolled,61,F,4.1,No,North,Under 65,14.5,0,2
+370,Enrolled,69,F,4.0,No,North,65 and over,8.0,0,7
+371,Enrolled,58,F,2.4,No,North,Under 65,19.6,0,4
+372,Enrolled,63,F,0.7,No,East,Under 65,13.7,0,3
+373,Usual care,54,M,9.1,Yes,East,Under 65,3.3,1,4
+374,Enrolled,51,F,4.2,Yes,North,Under 65,15.2,0,2
+375,Usual care,64,M,6.6,No,North,Under 65,10.5,0,3
+376,Usual care,63,M,5.0,Yes,South,Under 65,10.2,0,3
+377,Enrolled,83,F,3.7,No,East,65 and over,10.1,0,6
+378,Usual care,75,M,7.4,No,South,65 and over,2.8,0,6
+379,Enrolled,51,F,0.5,Yes,North,Under 65,21.0,0,4
+380,Usual care,65,M,6.1,No,South,65 and over,12.5,0,1
+381,Enrolled,67,M,6.9,No,South,65 and over,7.5,0,12
+382,Usual care,63,M,6.6,No,North,Under 65,7.8,0,5
+383,Usual care,62,M,7.2,No,South,Under 65,11.5,0,3
+384,Enrolled,65,F,4.3,No,East,65 and over,10.8,0,4
+385,Usual care,67,M,6.9,Yes,South,65 and over,8.6,1,2
+386,Usual care,75,M,6.0,Yes,South,65 and over,9.9,1,6
+387,Enrolled,63,F,4.6,Yes,North,Under 65,14.7,0,4
+388,Enrolled,60,F,7.3,No,South,Under 65,12.5,1,5
+389,Enrolled,74,M,3.5,No,North,65 and over,9.8,0,8
+390,Enrolled,71,F,6.7,No,South,65 and over,10.6,0,2
+391,Enrolled,54,F,6.4,No,East,Under 65,19.4,1,5
+392,Usual care,62,M,3.2,No,East,Under 65,11.8,0,1
+393,Enrolled,59,M,7.9,No,South,Under 65,9.7,0,5
+394,Enrolled,64,F,5.7,No,North,Under 65,18.8,0,5
+395,Usual care,67,F,7.1,Yes,South,65 and over,12.2,1,2
+396,Usual care,55,M,4.1,Yes,South,Under 65,10.1,0,0
+397,Enrolled,61,F,2.0,No,North,Under 65,19.9,0,6
+398,Usual care,71,M,3.1,No,South,65 and over,10.8,0,4
+399,Usual care,69,F,8.3,No,North,65 and over,6.6,0,3
+400,Usual care,55,M,7.9,Yes,North,Under 65,8.5,1,4

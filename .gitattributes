@@ -1,0 +1,2 @@
+# Keep NIST reference files byte-for-byte as published.
+*.dat -text

@@ -1,0 +1,71 @@
+[package]
+name = "app-gui"
+description = "Desktop front end (egui/eframe): data grid, collapsible analysis reports and linked-brushing plots."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+publish.workspace = true
+
+[dependencies]
+app-model.workspace = true
+stat-bayes.workspace = true
+stat-core.workspace = true
+stat-data.workspace = true
+stat-doe.workspace = true
+stat-predictive.workspace = true
+stat-quality.workspace = true
+stat-script.workspace = true
+stat-signal.workspace = true
+stat-viz = { workspace = true, features = ["egui"] }
+# The egui crates must share one release line; 0.31.x versions are mutually compatible.
+eframe = { version = "0.31", features = ["wgpu"] }
+egui_extras = "0.31"
+egui_plot = "0.31"
+# Local dates and times of recent files on the start page.
+chrono = { version = "0.4", default-features = false, features = ["clock"] }
+# Rasterizing the bundled Lucide icons (the release app-model already uses).
+resvg = { version = "0.47", default-features = false }
+
+# Native builds: database drivers and web import, native file dialogs and the
+# system clipboard. The web dashboard viewer (wasm32) leaves them out.
+[target.'cfg(not(target_arch = "wasm32"))'.dependencies]
+app-model = { workspace = true, features = ["default"] }
+stat-script = { workspace = true, features = ["external-data"] }
+# Native open / save dialogs.
+rfd = "0.15"
+# Reading the system clipboard from menu items (keyboard paste arrives as an
+# egui event); the same release eframe already uses.
+arboard = { version = "3.4", default-features = false }
+# Copy plot: several formats of one figure on the clipboard at once (PNG,
+# PDF and SVG), which arboard cannot offer. No image decoding on macOS and
+# Linux: the PNG goes on as it is.
+clipboard-rs = { version = "0.3.5", default-features = false }
+
+# The web dashboard viewer: eframe's browser runner, drawn with WebGL (glow),
+# which every browser offers, and fetching the published project file.
+[target.'cfg(target_arch = "wasm32")'.dependencies]
+eframe = { version = "0.31", features = ["glow"] }
+wasm-bindgen = "0.2"
+wasm-bindgen-futures = "0.4"
+web-sys = { version = "0.3", features = ["Document", "Window", "Element", "HtmlCanvasElement", "HtmlElement", "Location", "Request", "RequestInit", "Response", "UrlSearchParams"] }
+
+# Windows: Copy plot also offers a device-independent bitmap, which Windows
+# programs paste most widely (clipboard-rs decodes the PNG for it).
+[target.'cfg(target_os = "windows")'.dependencies]
+clipboard-rs = { version = "0.3.5", default-features = false, features = ["image"] }
+
+# macOS only: turn off the default menu bar so ⌘Q asks about unsaved changes
+# (the same winit release eframe uses).
+[target.'cfg(target_os = "macos")'.dependencies]
+winit = "0.30"
+
+[lints]
+workspace = true
+
+[dev-dependencies]
+egui_kittest = { version = "0.31", features = ["eframe", "wgpu", "snapshot"] }
+# Cropping the manuals' pictures (the release egui_kittest renders with).
+image = { version = "0.25", default-features = false, features = ["png"] }
+# Test databases for the import dialog's tests (the same release app-model uses).
+rusqlite = { version = "0.37", features = ["bundled"] }

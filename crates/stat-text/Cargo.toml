@@ -1,0 +1,18 @@
+[package]
+name = "stat-text"
+description = "Text analysis: Unicode word tokenization, stop words, Porter stemming, phrases, document-term matrices with TF-IDF weighting, latent semantic analysis by truncated SVD, topic models by collapsed Gibbs sampling, and lexicon-based sentiment scoring with negation."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+publish.workspace = true
+
+[dependencies]
+stat-core.workspace = true
+unicode-segmentation = "1.12"
+
+[lints]
+workspace = true
+
+[dev-dependencies]
+stat-data.workspace = true
